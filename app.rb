@@ -1,13 +1,10 @@
 require 'sinatra'
-
-get '/Chris' do
-  "Hello Chris"
-end
+set :session_secret, "g5huefgyf23ysy2"
 
 get '/' do
   "Hello World"
 end
 
-get '/hello/:name' do |n|
-  "Hello #{n}"
+get '/secret' do
+  "This is a secret page"
 end
